@@ -30,22 +30,11 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   const port = process.env.PORT || 3001;
-  console.log("🚀 ~ file: main.ts:33 ~ bootstrap ~ port:", port)
-  Logger.log(`SERVER is running on: ${port}`);
 
   await app.listen(port, '0.0.0.0');
-  // await app.listen(port, '0.0.0.0');
-
   
-  Logger.log(`Application is running on: ${await app.getUrl()}`);
+  Logger.log(`Application is running on: ${port} - ${await app.getUrl()}`);
   Logger.log(`Application is running in : ${await config.get('ENVIRONMENT')} mode`);
-
-  Logger.log(`Application is running on: ${await app.getUrl()}`);
-  Logger.log(`Application is running in ==== : ${await config.get('ENVIRONMENT')} mode`);
-
-  Logger.log(`Application is running on: ${await app.getUrl()}`);
-  Logger.log(`Application is running in ==== : ${await config.get('ENVIRONMENT')} mode`);
-
   
 }
 bootstrap();
