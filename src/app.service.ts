@@ -7,6 +7,6 @@ export class AppService {
   }
 
   getHelloDev(): string {
-    return 'Hello World! development branch !';
+    return 'Hello World! development branch azure runner!';
   }
 }
